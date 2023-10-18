@@ -1,0 +1,75 @@
+.category-container{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    position: relative;
+}
+
+.category{
+  /* display: flex; */
+
+}
+.category-name{
+  display: flex;
+  color: #878787;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.movies-posters{
+  display: flex;
+}
+
+.movie-poster{
+  /* width: 241.93px;
+height: 92.33px; */
+/* top: 267px;
+left: 92px; */
+/* margin-top: 20px;
+border-radius: 9.16px; */
+/* background: rebeccapurple; */
+}
+
+.Poster{
+  width: 301.93px;
+height: 192.33px;
+/* top: 267px;
+left: 92px; */
+margin-left: 40px;
+border-radius: 9.16px;
+
+}
+
+.pargraph{
+  font-family: Roboto;
+font-size: 20px;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: 0.02em;
+text-align: left;
+color: #FFFFFF;
+margin-left: 40px;
+}
+
+.spl{
+  color: #72DB73;
+  margin-left: 20px;
+}
+
+.musc{
+  width: 51px;
+height: 51px;
+/* top: 41px;
+left: 1556px; */
+border-radius: 39.96px;
+border: 1.41px;
+position: absolute;
+right: 40px;
+top: 20px;
+cursor: pointer;
+}

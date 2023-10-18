@@ -3,6 +3,7 @@ import { useState } from "react";
 import vector from '../assets/Vector.svg'
 import "./Page2.css";
 import { useNavigate } from "react-router-dom";
+import Details from "../components/Details";
 const Page2 = () => {
   const data = [
     {
@@ -68,7 +69,8 @@ const Page2 = () => {
 
   const clickHandler = (data) => {
     setDeaultCategory(data);
-    console.log(data);
+    // console.log(data);
+
     if (!selectedCategories.includes(data)) {
       selectedCategories.push(data);
     }
@@ -81,7 +83,9 @@ const Page2 = () => {
     const index = updatedCategories.indexOf(data);
 
     updatedCategories.splice(index, 1);
+    localStorage.setItem('selectedCategories', JSON.stringify(updatedCategories));
     setSelectedCategory(updatedCategories);
+
   };
 
   const [defaultCategory, setDeaultCategory] = useState("");
@@ -98,10 +102,19 @@ const Page2 = () => {
   };
   function NextButtonHandler(){
     if(!errors){
+      
       Navigate('/Climat')
+      localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
     }
-     
+    
   }
+
+  useEffect(() => {
+    const storedSelectCategory = JSON.parse(localStorage.getItem('selectedCategories'));
+    if (storedSelectCategory) {
+      setSelectedCategory(storedSelectCategory);
+    }
+  }, []);
 
   return (
     <div className="All">
@@ -149,6 +162,7 @@ const Page2 = () => {
       </div>
 
       <button className="Next_page" onClick={NextButtonHandler}>Next Page</button>
+      {/* <Details selectedCategories={selectedCategories}/> */}
     </div>
   );
 };

@@ -3,15 +3,19 @@ import LoginPage from './pages/LoginPage';
 import { Route, Routes } from 'react-router';
 import Page2 from './pages/Page2';
 import Climat from './pages/Climat';
+import Browser from './pages/Browser';
+// import { async } from 'rxjs';
+// import { response } from 'express';
 
 function App() {
+
   return (
     <div>
-      {/* <Link to="/"><LoginPage/></Link> */}
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/Page2" element={<Page2 />} />
         <Route path="/Climat" element={<Climat />} />
+        <Route path='/Browser' element={<Browser/>}/>
       </Routes>
     </div>
   );
